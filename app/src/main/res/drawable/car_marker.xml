@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Shadow -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M12,4L3,12v9.5h18V12L12,4z"/>
+
+    <!-- Car body base -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M12,3L4,11v10h16V11L12,3zM19,20H5V11.6l7-7l7,7V20z"/>
+
+    <!-- Car body highlight -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M12,3L5,10.5v9.5h14V10.5L12,3z"/>
+
+    <!-- Windshield -->
+    <path
+        android:fillColor="#64B5F6"
+        android:pathData="M12,5l-5,5v6h10v-6L12,5zM16,15H8v-4l4-4l4,4V15z"/>
+
+    <!-- Side windows -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M8,11v4h8v-4l-4-4z"/>
+
+    <!-- Roof highlight -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M12,5l-4,4h8z"/>
+
+    <!-- Hood highlight -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M8,15h8l-4,2z"/>
+
+    <!-- Front grill -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M8,15h8v1h-8z"/>
+
+    <!-- Headlights -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M8,14.5h2v0.5h-2z"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M14,14.5h2v0.5h-2z"/>
+
+    <!-- Direction indicator -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M12,4l1,1h-2z"/>
+
+    <!-- Wheel wells -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M6,16.5a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0"/>
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M15,16.5a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0"/>
+
+    <!-- Wheels -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M6.5,16.5a1,1 0 1,0 2,0a1,1 0 1,0 -2,0"/>
+    <path
+        android:fillColor="#424242"
+        android:pathData="M15.5,16.5a1,1 0 1,0 2,0a1,1 0 1,0 -2,0"/>
+
+    <!-- Wheel highlights -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M7,16.5a0.5,0.5 0 1,0 1,0a0.5,0.5 0 1,0 -1,0"/>
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M16,16.5a0.5,0.5 0 1,0 1,0a0.5,0.5 0 1,0 -1,0"/>
+</vector>
