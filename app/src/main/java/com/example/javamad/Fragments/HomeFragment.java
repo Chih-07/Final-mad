@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.javamad.R;
+import com.example.javamad.Register;
 import com.example.javamad.activetrip;
 import com.google.android.material.card.MaterialCardView;
 

@@ -17,7 +17,7 @@ public class activetrip extends AppCompatActivity implements OnMapReadyCallback 
 
     private GoogleMap mMap;
     private TextView tvTime;
-    private MaterialButton btnEndTrip;
+    private MaterialButton btnStartTrip, btnEndTrip;
 
     private boolean isTimerRunning = false;
     private long elapsedTime = 0;
@@ -31,6 +31,7 @@ public class activetrip extends AppCompatActivity implements OnMapReadyCallback 
 
         // Initialize UI elements
         tvTime = findViewById(R.id.tvTime);
+        btnStartTrip = findViewById(R.id.btnStartTrip);
         btnEndTrip = findViewById(R.id.btnEndTrip);
 
         // Initialize Google Maps
@@ -39,10 +40,10 @@ public class activetrip extends AppCompatActivity implements OnMapReadyCallback 
             mapFragment.getMapAsync(this);
         }
 
-        // Start timer when activity starts
-        startTimer();
+        // Button click listener to start the timer
+        btnStartTrip.setOnClickListener(v -> startTimer());
 
-        // Button click listener
+        // Button click listener to stop the timer
         btnEndTrip.setOnClickListener(v -> stopTimerAndShowSummary());
     }
 
@@ -91,10 +92,11 @@ public class activetrip extends AppCompatActivity implements OnMapReadyCallback 
         @Override
         public void run() {
             if (isTimerRunning) {
-                elapsedTime++;
-                long hours = elapsedTime / 3600;
-                long minutes = (elapsedTime % 3600) / 60;
-                long seconds = elapsedTime % 60;
+                long elapsedMillis = System.currentTimeMillis() - startTime;
+                long hours = (elapsedMillis / 1000) / 3600;
+                long minutes = ((elapsedMillis / 1000) % 3600) / 60;
+                long seconds = (elapsedMillis / 1000) % 60;
+
                 tvTime.setText(String.format("%02d:%02d:%02d", hours, minutes, seconds));
 
                 timerHandler.postDelayed(this, 1000);

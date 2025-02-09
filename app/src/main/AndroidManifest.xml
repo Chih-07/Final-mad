@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.javamad"
     android:versionCode="1"
     android:versionName="1.0">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Google Maps API Key (Make sure to replace YOUR_API_KEY_HERE) -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,28 +28,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!-- LoginActivity that will be launched from MainActivity -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true">
-            <!-- No need for an intent filter here since it's not the main activity -->
-        </activity>
+        <activity android:name=".LoginActivity" android:exported="true"/>
 
         <!-- RegisterActivity that will be launched from LoginActivity -->
-        <activity
-            android:name=".Register"
-            android:exported="true">
-            <!-- No need for an intent filter here since it's not the main activity -->
-        </activity>
+        <activity android:name=".Register" android:exported="true"/>
 
         <!-- HomeActivity that will be launched after successful login -->
-        <activity
-            android:name=".home"
-            android:exported="true">
-            <!-- No need for an intent filter here either, as it's not the main activity -->
-        </activity>
+        <activity android:name=".home" android:exported="true"/>
+
+        <!-- Active Trip Activity -->
+        <activity android:name=".activetrip" android:exported="true"/>
+
+        <!-- Trip Summary Activity -->
+        <activity android:name=".tripsummary" android:exported="true"/>
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE"/>
 
     </application>
 
 </manifest>
-
